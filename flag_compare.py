@@ -19,3 +19,4 @@ for flag in get_all_flags():
 
 
 save_text_report(flag_results, test_case)
+save_html_report(flag_results, test_case)

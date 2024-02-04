@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is the {question} country?</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        html {
+            background-color: #f0f0fe;
+            font-family: Arial, Helvetica, sans-serif;
+            border-top: 0.5rem solid #333366;
+        }
+
+        body {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 5rem;
+            text-align: center;
+            font-weight: normal;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        h1 strong {
+            color: #333366;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .columns {
+            display: flex;
+        }
+
+        .columns .col1, .columns .col2 {
+            flex-grow: 1;
+            width: 0;
+        }
+        .columns .col1 {
+            padding-right: 0.5rem;
+        }
+        .columns .col2 {
+            padding-left: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid #666;
+            padding: 0.25rem;
+            background-color: white;
+        }
+
+        th {
+            text-align: left;
+            width: 150px;
+        }
+
+        .columns th {
+            width: unset;
+        }
+
+        table img {
+            max-width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>What is the <strong>{question}</strong> country?</h1>
+
+    <h2>Executive Summary for World Leaders</h2>
+
+    <div class="columns">
+        <div class="col1">
+            <h3>Best 5 Countries</h3>
+            <table>
+                {best5}
+            </table>
+        </div>
+        <div class="col2">
+            <h3>Worst 5 Countries</h3>
+            <table>
+                {worst5}
+            </table>
+        </div>
+    </div>
+
+    <h2>Details</h2>
+
+    {details}
+</body>
+</html>
