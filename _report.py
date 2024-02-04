@@ -27,7 +27,7 @@ def make_text_report(report, test_case):
     _text += ("\nWorst results:\n")
 
     items = report.items()
-    items = sorted(items, key=lambda i: i[1])
+    items = sorted(items, key=lambda i: (i[1], i[0]))
 
     for i in range(5):
         value = int(items[i][1] * 1000) / 10
@@ -64,7 +64,7 @@ def make_html_report(report, test_case):
         template = template.replace('{question}', f.read().strip())
 
     items = report.items()
-    items = sorted(items, key=lambda i: i[1])
+    items = sorted(items, key=lambda i: (i[1], i[0]))
 
     worst5 = ""
     # Worst results
