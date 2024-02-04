@@ -4,10 +4,13 @@ from PIL import Image
 TARGET_SIZE = (100, 100)
 
 def get_all_flags():
-    return ['de']
+    flags = []
+    for flag in os.scandir('world_flags'):
+        flags.append(flag.name[:2])
+    
+    return flags
 
 def open_flag(fn):
-    print(os.path.abspath(os.path.join('world_flags', f"{fn}.png")))
     return _read_flag(os.path.join('world_flags', f"{fn}.png"))
 
 def get_base_flag():
