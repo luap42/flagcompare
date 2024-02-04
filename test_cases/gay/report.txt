@@ -1,3 +1,5 @@
+What is the *gayest* country?
+
 Raw data:
 ad	71.2%
 ae	37.0%
@@ -76,6 +78,10 @@ fo	32.4%
 fr	46.1%
 ga	80.0%
 gb	43.5%
+gb-eng	24.1%
+gb-nir	26.1%
+gb-sct	50.2%
+gb-wls	45.7%
 gd	71.3%
 ge	34.4%
 gf	74.2%
@@ -251,11 +257,11 @@ zm	69.5%
 zw	59.0%
 
 Worst results:
-250.	ye	12.1%	(Yemen)
-249.	eg	13.6%	(Egypt)
-248.	iq	14.2%	(Iraq)
-247.	sy	14.4%	(Syrian Arab Republic)
-246.	kr	14.8%	(Korea)
+254.	ye	12.1%	(Yemen)
+253.	eg	13.6%	(Egypt)
+252.	iq	14.2%	(Iraq)
+251.	sy	14.4%	(Syrian Arab Republic)
+250.	kr	14.8%	(Korea)
 
 Top results:
 1.	co	91.2%	(Colombia)
