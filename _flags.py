@@ -19,5 +19,5 @@ def get_base_flag(test_case):
 def _read_flag(fp):
     im = Image.open(fp)
     im = im.resize(TARGET_SIZE)
-    im = im.convert('RGB')
+    im = im.convert('RGBA')
     return im

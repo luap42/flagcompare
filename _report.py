@@ -61,7 +61,12 @@ def make_html_report(report, test_case):
         table_template = f.read()
     
     with open(os.path.join('test_cases', test_case, 'question.txt')) as f:
-        template = template.replace('{question}', f.read().strip())
+        question = f.read().strip()
+    
+    with open(os.path.join('test_cases', test_case, 'attribute.txt')) as f:
+        attribute = f.read().strip()
+
+    template = template.replace('{question}', question)
 
     items = report.items()
     items = sorted(items, key=lambda i: (i[1], i[0]))
@@ -104,7 +109,7 @@ def make_html_report(report, test_case):
         name = _country_abbrev_to_name(code)
         country_flag_image = f'<img src="../../world_flags/{code}.png" alt="{code}">'
 
-        details += detail_template.replace("{perc}", perc).replace("{code}", code) \
+        details += detail_template.replace("{perc}", perc).replace("{attribute}", attribute).replace("{code}", code) \
                 .replace("{name}", name).replace("{country_flag_image}", country_flag_image) + "\n"
     
     template = template.replace("{details}", details)

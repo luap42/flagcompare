@@ -2,7 +2,7 @@ from _flags import *
 from _compare import *
 from _report import *
 
-import sys
+import sys, os
 
 if len(sys.argv) != 2:
     print("Usage: python3 {sys.argv[0]} [test case]")
@@ -20,3 +20,4 @@ for flag in get_all_flags():
 
 save_text_report(flag_results, test_case)
 save_html_report(flag_results, test_case)
+base_flag.save(os.path.join("test_cases", test_case, "flagmod.png"))
