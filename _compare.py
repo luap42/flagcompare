@@ -1,9 +1,9 @@
 from _flags import TARGET_SIZE
 import colorsys, math
 
-HUE_BAGAT = 0.1
-SAT_BAGAT = 0.1
-VAL_BAGAT = 0.1
+HUE_BAGAT = 0.05
+SAT_BAGAT = 0.05
+VAL_BAGAT = 0.05
 
 # Returns a number between 0.0 and 1.0 for likeness
 def compare(original, flag):
@@ -27,17 +27,17 @@ def _pixel_compare(original_pixel, flag_pixel):
     fhue, fsat, fval = colorsys.rgb_to_hsv(flag_pixel[0]/255, flag_pixel[1]/255, flag_pixel[2]/255)
 
     if ohue + HUE_BAGAT > fhue or ohue - HUE_BAGAT < fhue:
-        hue_sim = 1 - (abs((ohue - fhue)) - HUE_BAGAT)
+        hue_sim = 1 - abs((ohue - fhue))
     else:
         hue_sim = 1
     
     if osat + SAT_BAGAT > fsat or osat - SAT_BAGAT < fsat:
-        sat_sim = 1 - (abs((osat - fsat)) - SAT_BAGAT)
+        sat_sim = 1 - abs((osat - fsat))
     else:
         sat_sim = 1
     
     if oval + VAL_BAGAT > fval or oval - VAL_BAGAT < fval:
-        val_sim = 1 - (abs((oval - fval)) - VAL_BAGAT)
+        val_sim = 1 - abs((oval - fval))
     else:
         val_sim = 1
 

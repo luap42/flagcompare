@@ -1,3 +1,8 @@
+import json
+
+with open('world_countries.json', 'r') as f:
+    COUNTRIES = json.load(f)
+
 def print_text_report(report):
     keys = sorted(report.keys())
 
@@ -15,7 +20,7 @@ def print_text_report(report):
 
     for i in range(5):
         value = int(items[i][1] * 1000) / 10
-        print(f"{len(items) - i}.\t{items[i][0]}\t{value}%")
+        print(f"{len(items) - i}.\t{items[i][0]}\t{value}%\t({_country_abbrev_to_name(items[i][0])})")
 
     print()
     print("Top results:")
@@ -23,4 +28,7 @@ def print_text_report(report):
 
     for i in range(5):
         value = int(items[i][1] * 1000) / 10
-        print(f"{i+1}.\t{items[i][0]}\t{value}%")
+        print(f"{i+1}.\t{items[i][0]}\t{value}%\t({_country_abbrev_to_name(items[i][0])})")
+
+def _country_abbrev_to_name(abbrev):
+    return COUNTRIES[abbrev.upper()]
