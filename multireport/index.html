@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare flags for fun</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        html {
+            background-color: #f0f0fe;
+            font-family: Arial, Helvetica, sans-serif;
+            border-top: 0.5rem solid #333366;
+        }
+
+        body {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+            font-weight: normal;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        h1 strong {
+            color: #333366;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
+            line-height: 1.5
+        }
+
+        ul li a {
+            font-weight: bold;
+            color: inherit;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Compare country flags &ndash; <strong>for fun!</strong></h1>
+
+    <h2>Test cases</h2>
+
+    <p>We have the following test cases available:</p>
+
+    <ul>
+        <li>Compare for: <a href="pikachu.html">pikachu</a></li>
+<li>Compare for: <a href="yield.html">yield</a></li>
+<li>Compare for: <a href="gay.html">gay</a></li>
+<li>Compare for: <a href="9hax.html">9hax</a></li>
+<li>Compare for: <a href="trans.html">trans</a></li>
+<li>Compare for: <a href="happy.html">happy</a></li>
+    </ul>
+
+    <h2>Methodology</h2>
+
+    <p>We generate a 100px by 100px image of all flags and of a reference image relating to the test case.</p>
+    <p>Then we do some fancy math pixel-wise/color-respecting comparison of similiarity.</p>
+    <p>This is then presented as a scientific discovery.</p>
+</body>
+</html>
