@@ -27,6 +27,7 @@ for test_case in test_cases:
     # fix urls
     report = report.replace("../../world_flags/", "/world_flags/")
     report = report.replace("flagmod.png", f"{test_case}-flagmod.png")
+    report = report.replace("<!-- {backlink} -->", '<a href="/" class="backlink">back to index page</a>')
 
     # write report in multireport
     with open(f"multireport/{test_case}.html", 'w') as f:
